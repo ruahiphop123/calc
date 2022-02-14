@@ -151,7 +151,12 @@ public class Calculator extends javax.swing.JFrame {
         panel3.add(btNum9);
 
         btMultiply.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
-        btMultiply.setText("X");
+        btMultiply.setText("x");
+        btMultiply.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btMultiplyActionPerformed(evt);
+            }
+        });
         panel3.add(btMultiply);
 
         btNum4.setBackground(new java.awt.Color(255, 255, 255));
@@ -274,6 +279,10 @@ public class Calculator extends javax.swing.JFrame {
     private void btNum8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNum8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btNum8ActionPerformed
+
+    private void btMultiplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMultiplyActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btMultiplyActionPerformed
 
     /**
      * @param args the command line arguments
