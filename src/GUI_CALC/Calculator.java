@@ -17,6 +17,7 @@ public class Calculator extends javax.swing.JFrame {
      */
     public Calculator() {
         initComponents();
+        setLocationRelativeTo(null); //ra giữa
     }
 
     /**
@@ -61,9 +62,11 @@ public class Calculator extends javax.swing.JFrame {
         btMR = new javax.swing.JButton();
         btMPlus = new javax.swing.JButton();
         btMMinus = new javax.swing.JButton();
+        btMS = new javax.swing.JButton();
         btM = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         lb1.setFont(new java.awt.Font("Tahoma", 1, 35)); // NOI18N
         lb1.setText("Casio");
@@ -131,12 +134,12 @@ public class Calculator extends javax.swing.JFrame {
         panel3.add(btDivide);
 
         btNum7.setBackground(new java.awt.Color(255, 255, 255));
-        btNum7.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        btNum7.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         btNum7.setText("7");
         panel3.add(btNum7);
 
         btNum8.setBackground(new java.awt.Color(255, 255, 255));
-        btNum8.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        btNum8.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         btNum8.setText("8");
         btNum8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,7 +149,7 @@ public class Calculator extends javax.swing.JFrame {
         panel3.add(btNum8);
 
         btNum9.setBackground(new java.awt.Color(255, 255, 255));
-        btNum9.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        btNum9.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         btNum9.setText("9");
         panel3.add(btNum9);
 
@@ -160,17 +163,17 @@ public class Calculator extends javax.swing.JFrame {
         panel3.add(btMultiply);
 
         btNum4.setBackground(new java.awt.Color(255, 255, 255));
-        btNum4.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        btNum4.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         btNum4.setText("4");
         panel3.add(btNum4);
 
         btNum5.setBackground(new java.awt.Color(255, 255, 255));
-        btNum5.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        btNum5.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         btNum5.setText("5");
         panel3.add(btNum5);
 
         btNum6.setBackground(new java.awt.Color(255, 255, 255));
-        btNum6.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        btNum6.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         btNum6.setText("6");
         panel3.add(btNum6);
 
@@ -179,17 +182,17 @@ public class Calculator extends javax.swing.JFrame {
         panel3.add(btMinus);
 
         btNum1.setBackground(new java.awt.Color(255, 255, 255));
-        btNum1.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        btNum1.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         btNum1.setText("1");
         panel3.add(btNum1);
 
         btNum2.setBackground(new java.awt.Color(255, 255, 255));
-        btNum2.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        btNum2.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         btNum2.setText("2");
         panel3.add(btNum2);
 
         btNum3.setBackground(new java.awt.Color(255, 255, 255));
-        btNum3.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        btNum3.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         btNum3.setText("3");
         panel3.add(btNum3);
 
@@ -198,26 +201,26 @@ public class Calculator extends javax.swing.JFrame {
         panel3.add(btPlus);
 
         btPlusMinus.setBackground(new java.awt.Color(255, 255, 255));
-        btPlusMinus.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        btPlusMinus.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         btPlusMinus.setText("+/-");
         panel3.add(btPlusMinus);
 
         btNum0.setBackground(new java.awt.Color(255, 255, 255));
-        btNum0.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        btNum0.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         btNum0.setText("0");
         panel3.add(btNum0);
 
         btSubtract.setBackground(new java.awt.Color(255, 255, 255));
-        btSubtract.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        btSubtract.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         btSubtract.setText(".");
         panel3.add(btSubtract);
 
-        btEquals.setBackground(new java.awt.Color(102, 255, 255));
+        btEquals.setBackground(new java.awt.Color(51, 153, 255));
         btEquals.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
         btEquals.setText("=");
         panel3.add(btEquals);
 
-        panel2.setLayout(new java.awt.GridLayout(1, 5));
+        panel2.setLayout(new java.awt.GridLayout(1, 6));
 
         btMC.setFont(new java.awt.Font("Tahoma", 0, 26)); // NOI18N
         btMC.setText("MC");
@@ -227,13 +230,20 @@ public class Calculator extends javax.swing.JFrame {
         btMR.setText("MR");
         panel2.add(btMR);
 
-        btMPlus.setFont(new java.awt.Font("Tahoma", 0, 26)); // NOI18N
+        btMPlus.setBackground(new java.awt.Color(255, 255, 255));
+        btMPlus.setFont(new java.awt.Font("Tahoma", 1, 26)); // NOI18N
         btMPlus.setText("M+");
         panel2.add(btMPlus);
 
-        btMMinus.setFont(new java.awt.Font("Tahoma", 0, 26)); // NOI18N
+        btMMinus.setBackground(new java.awt.Color(255, 255, 255));
+        btMMinus.setFont(new java.awt.Font("Tahoma", 1, 26)); // NOI18N
         btMMinus.setText("M-");
         panel2.add(btMMinus);
+
+        btMS.setBackground(new java.awt.Color(255, 255, 255));
+        btMS.setFont(new java.awt.Font("Tahoma", 1, 26)); // NOI18N
+        btMS.setText("MS");
+        panel2.add(btMS);
 
         btM.setFont(new java.awt.Font("Tahoma", 0, 26)); // NOI18N
         btM.setText("M");
@@ -331,6 +341,7 @@ public class Calculator extends javax.swing.JFrame {
     private javax.swing.JButton btMMinus;
     private javax.swing.JButton btMPlus;
     private javax.swing.JButton btMR;
+    private javax.swing.JButton btMS;
     private javax.swing.JButton btMinus;
     private javax.swing.JButton btMultiply;
     private javax.swing.JButton btNgichDao;
